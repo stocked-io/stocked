@@ -1,0 +1,9 @@
+{
+  "name": "stocked/stocked",
+  "type": "typo3-cms-extension",
+  "autoload": {
+    "psr-4": {
+      "Stocked\\Stocked\\": "Classes/"
+    }
+  }
+}
