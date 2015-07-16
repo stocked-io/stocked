@@ -1,0 +1,1 @@
+var foundationRoutes = [{"name":"home","path":"http://stocked-io.dev/index.php?id=2&eID=Tx_ThemeFoundationApps_LoadTemplate&templateFilename=home.html&appExtensionKey=stocked","url":"/"},{"name":"test","path":"http://stocked-io.dev/index.php?id=2&eID=Tx_ThemeFoundationApps_LoadTemplate&templateFilename=test.html&appExtensionKey=stocked","url":"/test"}];
