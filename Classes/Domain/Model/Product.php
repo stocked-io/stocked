@@ -1,11 +1,13 @@
 <?php
 namespace Stocked\Stocked\Domain\Model;
 
+use Stocked\Stocked\Domain\DateInterval;
+
 class Product extends AbstractUserOwnedEntity {
 
 	/**
 	 * The default delivery time for that product in seconds
-	 * @var int
+	 * @var DateInterval
 	 */
 	protected $defaultDeliveryTime;
 
@@ -15,14 +17,14 @@ class Product extends AbstractUserOwnedEntity {
 	protected $title;
 
 	/**
-	 * @return int
+	 * @return DateInterval
 	 */
 	public function getDefaultDeliveryTime() {
 		return $this->defaultDeliveryTime;
 	}
 
 	/**
-	 * @param int $defaultDeliveryTime
+	 * @param DateInterval $defaultDeliveryTime
 	 */
 	public function setDefaultDeliveryTime($defaultDeliveryTime) {
 		$this->defaultDeliveryTime = $defaultDeliveryTime;

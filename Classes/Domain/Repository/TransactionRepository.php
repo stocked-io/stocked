@@ -5,9 +5,8 @@ use Stocked\Stocked\Domain\Model\Product;
 use Stocked\Stocked\Domain\Model\Transaction;
 use TYPO3\CMS\Extbase\Persistence\Generic\Query;
 use TYPO3\CMS\Extbase\Persistence\QueryResultInterface;
-use TYPO3\CMS\Extbase\Persistence\Repository;
 
-class TransactionRepository extends Repository {
+class TransactionRepository extends AbstractAuthorizationRequiringRepository {
 
 	/**
 	 * @param Product $product

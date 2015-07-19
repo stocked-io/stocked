@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext">
+		<header/>
+		<body>
+			<trans-unit id="tx_stocked_domain_model_product">
+				<source>Product</source>
+			</trans-unit>
+			<trans-unit id="tx_stocked_domain_model_product.company">
+				<source>Company</source>
+			</trans-unit>
+			<trans-unit id="tx_stocked_domain_model_product.default_delivery_time">
+				<source>Default Delivery Time</source>
+			</trans-unit>
+			<trans-unit id="tx_stocked_domain_model_product.title">
+				<source>Title</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

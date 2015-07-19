@@ -4,9 +4,8 @@ namespace Stocked\Stocked\Domain\Repository;
 use Stocked\Stocked\Domain\Model\Product;
 use Stocked\Stocked\Domain\Model\Stock;
 use TYPO3\CMS\Extbase\Persistence\QueryInterface;
-use TYPO3\CMS\Extbase\Persistence\Repository;
 
-class StockRepository extends Repository {
+class StockRepository extends AbstractAuthorizationRequiringRepository {
 
 	/**
 	 * @param Product $product

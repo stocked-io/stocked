@@ -14,7 +14,7 @@ use TYPO3\CMS\Extbase\Persistence\QueryResultInterface;
  * * salesPerSecond()
  * * saleStartDate()
  */
-class StockTaker {
+class Stocktaker {
 
 	/**
 	 * @var \TYPO3\CMS\Extbase\Object\ObjectManager
@@ -35,6 +35,9 @@ class StockTaker {
 	protected $transactionRepository;
 
 	/**
+	 * When counting the amount of a product in stock there are two sources:
+	 * * Stock records: Record when the user provided
+	 *
 	 * @param Product $product
 	 * @return int
 	 * @throws InvalidTransactionTypeException
@@ -105,6 +108,8 @@ class StockTaker {
 	}
 
 	/**
+	 * Generates a fake transaction
+	 *
 	 * @param Product $product
 	 * @return Transaction
 	 */
@@ -118,8 +123,8 @@ class StockTaker {
 		$transaction = $this->objectManager->get(Transaction::class);
 		$transaction->setType(Transaction::TYPE_PURCHASE);
 		$transaction->setAmount($lastStockCountBeforeFirstPurchase->getAmount());
-		$transaction->setOrderDate(new \DateTime('- ' . $product->getDefaultDeliveryTime() . ' seconds'));
-		$transaction->setCompletionDate(new \DateTime('now'));
+		$transaction->setOrderDate($firstProductPurchase->getOrderDate()->sub(new \DateInterval($product->getDefaultDeliveryTime() . 's')));
+		$transaction->setCompletionDate($firstProductPurchase->getOrderDate());
 		return $transaction;
 	}
 
