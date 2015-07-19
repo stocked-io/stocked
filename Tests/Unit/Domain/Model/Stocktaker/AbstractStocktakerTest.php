@@ -1,5 +1,5 @@
 <?php
-namespace Stocked\Stocked\Tests\Unit\Domain\Stocktaker;
+namespace Stocked\Stocked\Tests\Unit\Domain\Model\Stocktaker;
 
 use Stocked\Stocked\Domain\Model\Transaction;
 use Stocked\Stocked\Domain\Repository\StockRepository;

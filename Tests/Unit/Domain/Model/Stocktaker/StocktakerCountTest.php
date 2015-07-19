@@ -1,10 +1,9 @@
 <?php
-namespace Stocked\Stocked\Tests\Unit\Domain;
+namespace Stocked\Stocked\Tests\Unit\Domain\Model\Stocktaker;
 
 use Stocked\Stocked\Domain\Model\Product;
 use Stocked\Stocked\Domain\Model\Stock;
 use Stocked\Stocked\Domain\Model\Transaction;
-use Stocked\Stocked\Tests\Unit\Domain\Stocktaker\AbstractStocktakerTest;
 
 class StocktakerCountTest extends AbstractStocktakerTest {
 
